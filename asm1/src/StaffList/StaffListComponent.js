@@ -1,6 +1,8 @@
 import { STAFFS } from "../shared/staffs";
 import { Card, CardText, CardBody, CardTitle } from "reactstrap";
 import React, { Component } from "react";
+import dateFormat from 'dateformat'; 
+
 
 class List extends Component {
 
@@ -8,25 +10,27 @@ class List extends Component {
         super(props);
 
         this.state = {
-            selectedStaff: null
+            selectedStaff: undefined
         }
-    }
+    };
 
     onStaffSelect(staffs) {
-        this.setState({ selectedStaff: staffs })
-    }
+        console.log(staffs, 'staffs');
+        this.setState({ selectedStaff: staffs });
+    };
+    
+    
 
     renderStaff(staffs) {
-        if (staffs != null) {
+       
             return (
-                <CardBody>
+                staffs && <CardBody>
                     <CardTitle>{staffs.name}</CardTitle>
-                    <CardText>{staffs.department}</CardText>
+                    <CardText>Ngày sinh : {dateFormat(staffs.doB, "dd/mm/yyyy")}</CardText>
+                    
                 </CardBody>
             )
-        } else {
-            <div></div>
-        }
+      
     }
 
     render() {
