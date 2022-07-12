@@ -29,7 +29,8 @@ class List extends Component {
                     <CardText>Ngày sinh : {dateFormat(staffs.doB, "dd/mm/yyyy")}</CardText>
                     <CardText>Ngày vào công ty : {dateFormat(staffs.startDate, "dd/mm/yyyy")}</CardText>
                     <CardText>Phòng ban : {staffs.department?.name}</CardText>
-                    
+                    <CardText>Số ngày nghỉ còn lại : {staffs.salaryScale}</CardText>
+                    <CardText>Số ngày đã làm thêm : {staffs.overTime}</CardText>
                 </CardBody>
             )
       
