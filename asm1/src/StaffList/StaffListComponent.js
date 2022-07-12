@@ -27,6 +27,7 @@ class List extends Component {
                 staffs && <CardBody>
                     <CardTitle>{staffs.name}</CardTitle>
                     <CardText>Ngày sinh : {dateFormat(staffs.doB, "dd/mm/yyyy")}</CardText>
+                    <CardText>Ngày vào công ty : {dateFormat(staffs.startDate, "dd/mm/yyyy")}</CardText>
                     
                 </CardBody>
             )
