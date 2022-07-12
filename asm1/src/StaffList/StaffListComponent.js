@@ -39,7 +39,7 @@ class List extends Component {
     render() {
         const List = this.props.staffs.map((staffs) => {
             return (
-                <div className='col-12 col-md-5 m-1'>
+                <div className='col-12 col-md-5 '>
                     <Card key={staffs.id} onClick={() => this.onStaffSelect(staffs)}>
                         <CardTitle>{staffs.name}</CardTitle>
                     </Card>
