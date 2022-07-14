@@ -17,7 +17,7 @@ class Menu extends Component {
     renderDish(dish) {
       if (dish != null){
         return(
-          <Card>
+          <Card onClick={() => this.props.onClick(dish.id)}>
             <CardImg width='100%' src={dish.image} alt={dish.name} />
             <CardBody>
               <CardTitle>{dish.name}</CardTitle>
@@ -52,9 +52,6 @@ class Menu extends Component {
             <div className="row">
               
                   {menu}
-            </div>
-            <div className='row'>
-              {this.renderDish(this.state.selectedDish)}
             </div>
           </div>
         );
